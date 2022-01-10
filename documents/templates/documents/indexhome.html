@@ -1,0 +1,159 @@
+<!doctype html>
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>::lost & Found-Notify </title>
+    <link rel="stylesheet" href="{% static '/css/stylew.css' %}">
+    <link rel="shortcut icon" href="../images/fav_icon.png" type="image/x-icon">
+</head>
+
+<body>
+    <div class="lAndfContainer">
+
+        <div class="lAndfNavbar">
+            <!-- <div class="navbarLeft">
+                <h1>Lost&found</h1>
+            </div> -->
+            <div class="navbarLeft">
+                <a href="{% url 'home' %} "><img src="{% static 'images/Lost & found.png '%} "> </a>
+            </div>
+            <div class="navbarRight ">
+                <nav>
+                    <a href=" {% url 'home' %} ">Home</a>
+                    <a href=" {% url 'ordering' %} "> Contact us for lost or found </a>
+                    <a href="# ">About us </a>
+                </nav>
+            </div>
+        </div>
+
+        <body lang="en ">
+            <div class="lAndfImg ">
+                <img src="{% static 'images/lostandFound.png '%} " alt=" ">
+                <p class="landfImgText" style="color: black;">We have come up with a great solution to help you finding your lost Documents</p>
+            </div>
+
+            <section class="latestDocs ">
+                <div class="latestDocs__header " style="float:left ">
+                    <h1>Here is the latest</h1>
+                </div>
+                <div class="latestDocs__body ">
+                    {% for eachdocument in idcards %}
+                    <div class=" ">
+
+                        <!-- <img src="./img/docs1.jpg " alt=" "> -->
+                        <img src="{% static eachdocument.image %} " alt="Placeholder image " class="modal-button " data-target="modal-image2 ">
+                        <p> Names :{{eachdocument.first_name}} {{eachdocument.second_name}}</p>
+                        <p>Born {{eachdocument.birthdate}} Issued {{eachdocument.district}}</p>
+
+                        <a href="{% url 'details' eachdocument.id %} ">More</a>
+
+                    </div>
+                    {% endfor %}
+                    <!-- <div>
+                    <img src="./img/docs2.jpeg " alt=" ">
+                    <p>This Document was found in the bus from Kimironko to Nyabugogo</p>
+                    <a href="/doc.html ">More</a>
+                </div> -->
+                    <!-- <div>
+                    <img src="./img/docs3.jpg " alt=" ">
+                    <p>This Document was found in the bus from Kimironko to Nyabugogo</p>
+                    <a href="/doc.html ">More</a>
+                </div> -->
+                    <!-- <div>
+                    <img src="./img/docs4.jpg " alt=" ">
+                    <p>This Document was found in the bus from Kimironko to Nyabugogo</p>
+                    <a href="/doc.html ">More</a>
+                </div> -->
+
+                </div>
+            </section>
+            <section class="srch ">
+                <h2>Search your document accordingly</h2>
+                <form class="navbar-item " name="q " method="Post " action="{% url 'search' %} ">
+                    <input type="text " placeholder="Search ">
+                </form>
+            </section>
+
+            <section class="alldocs-section ">
+                <h1>All Documents</h1>
+                <div class="alldocs ">
+                    {% for all_id in idcard2 %}
+                    <div class="alldocs_column " style="align-self: left; ">
+
+                        <!-- <img src="./img/docs1.jpg " alt=" "> -->
+                        <img src="{% static all_id.image %} " alt="Placeholder image " class="modal-button " data-target="modal-image2 ">
+                        <p> Names :{{all_id.first_name}} {{all_id.second_name}}</p>
+                        <p>Born {{all_id.birthdate}} Issued {{all_id.district}}</p>
+
+
+                        <a href="{% url 'details' all_id.id %} ">More</a>
+
+                    </div>
+                    {% endfor %}
+                </div>
+                <!-- </div>
+                <section class="alldocs-section ">
+                    <h1>All Documents</h1>
+                    <div class="alldocs "> -->
+                <!-- {% for all_id in page %} -->
+                <!-- <div class="alldocs_column "> -->
+
+                <!-- <img src="./img/docs1.jpg " alt=" "> -->
+                <!-- <img src="{% static all_id.image %} " alt="Placeholder image " class="modal-button " data-target="modal-image2 "> -->
+                <!-- <p style="align-self: left!important; "> Names :{{all_id.first_name}} {{all_id.second_name}}</p> -->
+                <!-- <p style="align-self: left!important; ">Born {{all_id.birthdate}} Issued {{all_id.district}}</p> -->
+
+    </div>
+    <!-- {% endfor %} -->
+    </div>
+    </section>
+
+    <section class="lAndfFooter ">
+        <div class="footerLeft ">
+            <h1>Lost&found</h1>
+            <p class="footerLeft_txt ">We are the best found of lost document</p>
+            <div style="display: flex; ">
+                <ion-icon name="mail-outline "></ion-icon>
+                <p>info@lostandound.rw</p>
+            </div>
+            <div style="display: flex; ">
+                <ion-icon name="call-outline "></ion-icon>
+                <p>0791589605</p>
+            </div>
+        </div>
+        <div style="display: flex; ">
+            <ion-icon name="logo-facebook "></ion-icon>
+            <!-- <p>lost&found</p> -->
+        </div>
+
+        </div>
+        <div class="footerRight ">
+            <form class="navbar-item " name="q " method="Post " action="{% url 'search' %} ">
+                <h2>Contact us</h2>
+                <input type="text " placeholder="Name  HI">
+                <br>
+                <input type="text " placeholder="Email " name="email">
+                <br>
+                <textarea>Message</textarea>
+                <br>
+                <button>Send message</button>
+            </form>
+        </div>
+    </section>
+
+    </div>
+    <!-- <div style="display: flex; position: absolute; bottom: 10px; ">
+        <h4 style="font-weight: 100; ">Copyright &copy; 2021 Lot&found All rights reserved</h4>
+    </div> -->
+
+    <script type="module " src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js "></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js "></script>
+
+    </body>
+
+</html>

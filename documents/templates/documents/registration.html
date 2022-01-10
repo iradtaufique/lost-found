@@ -1,0 +1,22 @@
+ {% include 'documents/navbar.html' %}{% load static %} {% load crispy_forms_tags %}
+
+<body>
+    <div class="lAndfContainer">
+
+        <div class="lAndfNavbar">
+            <div class="navbarLeft">
+                <h1>Lost&found</h1>
+            </div>
+            <div class="navbarRight">
+                <nav>
+                    <a href="#">Home</a>
+                    <a href="#">About</a>
+                    <a href="#">Contact us</a>
+                </nav>
+            </div>
+        </div>
+        <title> Sign up</title>
+        <form method="POST">
+            {{ form }} {% csrf_token %}
+            <input type="submit" value="Register">
+        </form>

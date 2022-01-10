@@ -1,0 +1,347 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Poppins, Helvetica, sans-serif;
+}
+
+.lAndfNavbar {
+    display: flex;
+    justify-content: space-between;
+    /* background-color: #0072D6; */
+    background-color: white;
+    padding: 10px 50px;
+    align-items: center;
+    height: 60px;
+    position: fixed;
+    width: 93%;
+    z-index: 100;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+    top: 0;
+}
+
+.navbarLeft h1 {
+    font-weight: 400;
+    font-size: 30px;
+    /* color: blue; */
+}
+
+.navbarRight a {
+    text-decoration: none;
+    /* color: white; */
+    color: black;
+    margin: 0 10px;
+    font-size: 20px;
+    font-weight: 100;
+}
+
+.navbarRight a:hover {
+    color: #0072D6;
+    border-bottom: 2px solid #0072D6;
+}
+
+.lAndfImg {
+    width: 100%;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.lAndfImg img {
+    width: 100%;
+    height: 80%;
+}
+
+.landfImgText {
+    position: absolute;
+    color: white;
+    font-size: 40px;
+    width: 40%;
+    text-shadow: 2px 2px #5b526b;
+}
+
+.latestDocs {
+    background-color: rgb(243, 243, 243);
+}
+
+.latestDocs__header {
+    padding: 20px 50px;
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+}
+
+.latestDocs__header h1 {
+    font-weight: 200;
+    padding: 20px 0;
+    font-size: 30px;
+}
+
+.latestDocs__body {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    width: 90%;
+    margin: 0 auto;
+    gap: 20px;
+}
+
+.latestDocs__body>div {
+    /* padding: 0px; */
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 15px;
+    margin-bottom: 50px;
+    border-radius: 6px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+    width: 290px;
+}
+
+.latestDocs__body>div:hover {
+    transform: scale(1.02);
+    transition: 0.5s ease-in-out;
+}
+
+.latestDocs__body>div>img {
+    width: 100%;
+    height: 270px;
+    border-radius: 6px 6px 0 0;
+}
+
+.latestDocs__body>div>p {
+    align-self: flex-start;
+    margin: 10px 8px;
+}
+
+.latestDocs__body>div>a {
+    /* border: 1px solid #0072D6; */
+    align-self: flex-start;
+    color: black;
+    border-radius: 5px;
+    padding: 5px 10px;
+    text-decoration: none;
+    margin: 10px 10px;
+    background-color: #9FDAFC;
+    color: black;
+}
+
+.latestDocs__body>div>a:hover {
+    background-color: #95cbeb;
+    color: black;
+}
+
+.srch {
+    background-color: white;
+    height: 37vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.srch h2 {
+    font-weight: 100;
+    margin-bottom: 20px;
+}
+
+.srch input {
+    width: 150%;
+    height: 45px;
+    border-radius: 30px;
+    border: none;
+    background-color: rgb(240, 240, 240);
+    padding: 0 20px;
+}
+
+.alldocs-section {
+    padding: 20px 0;
+    background-color: rgb(243, 243, 243);
+}
+
+.alldocs-section h1 {
+    margin: 30px 0;
+    font-size: 30px;
+    font-weight: 300;
+    text-align: center;
+    font-family: Georgia;
+}
+
+.alldocs {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    width: 80%;
+    gap: 30px;
+    margin: 0 auto;
+}
+
+.alldocs div {
+    display: flex;
+    flex-direction: column;
+    width: 290px;
+    align-items: center;
+    background-color: white;
+    border-radius: 7px;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+}
+
+.alldocs>div:hover {
+    transform: scale(1.02);
+    transition: 0.5s ease-in-out;
+}
+
+.alldocs div img {
+    border-radius: 7px 7px 0 0;
+}
+
+.alldocs div p {
+    align-self: flex-start;
+    padding: 10px;
+}
+
+.alldocs div>a {
+    align-self: flex-start;
+    background-color: #9FDAFC;
+    color: black;
+    text-decoration: none;
+    border-radius: 5px;
+    padding: 3px 10px;
+    margin-left: 10px;
+}
+
+.alldocs>div>img {
+    width: 100%;
+    height: 250px;
+}
+
+.lAndfFooter {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(25, 119, 182);
+    height: 400px;
+    width: 100%;
+}
+
+.footerLeft {
+    color: white;
+    width: 60%;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.footerLeft h1 {
+    font-weight: 200;
+    font-size: 30px;
+    margin-bottom: 15px;
+    font-family: Poppins sans-serif;
+}
+
+.footerLeft_txt {
+    font-weight: 100;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.footerLeft>div>p {
+    padding: 0 10px;
+}
+
+.footerLeft h4 {
+    bottom: 0;
+    font-family: Poppins, sans-serif;
+}
+
+.footerRight {
+    width: 40%;
+    padding: 30px 70px;
+}
+
+.footerRight form {
+    background-color: white;
+    padding-left: 50px;
+    padding-bottom: 30px;
+    border-radius: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.footerRight form h2 {
+    padding: 20px 0 30px 0;
+    /* text-align: center; */
+}
+
+.footerRight form input {
+    width: 80%;
+    height: 25px;
+    padding: 5px 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(243, 243, 243);
+}
+
+.footerRight form textarea {
+    width: 80%;
+    height: 70px;
+    padding: 5px 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 60;
+    background-color: rgb(243, 243, 243);
+}
+
+.footerRight form button {
+    padding: 10px 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #9FDAFC;
+}
+
+
+/* All about doc page */
+
+.doc__body {
+    width: 80%;
+    margin: 150px auto;
+    display: flex;
+    background-color: rgb(243, 243, 243);
+}
+
+.doc__body-left {
+    width: 60%;
+    height: 450px;
+}
+
+.doc__body-left img {
+    width: 100%;
+    height: 100%;
+}
+
+.doc__body-right {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 30px;
+}
+
+.doc__body-right div {
+    display: flex;
+}
+
+.doc__body-edit {
+    padding: 10px 0;
+    border-radius: 5px;
+    border: none;
+    margin: 20px 0 0 0;
+    background-color: #8690eb;
+}
+
+.doc__body-delete {
+    padding: 10px 0;
+    border-radius: 5px;
+    border: none;
+    margin: 20px 0 0 0;
+    background-color: rgb(78, 35, 35);
+    color: white;
+}

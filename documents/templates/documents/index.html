@@ -1,0 +1,38 @@
+{% include 'documents/navbar.html' %}{% load static %}
+<!DOCTYPE html>
+<html lang="en">{% load static %}
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="../images/fav_icon.png" type="image/x-icon">
+    <title>Lost and Found</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/overlayscrollbars/1.9.1/css/OverlayScrollbars.min.css'>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+
+    <body>
+        {% for eachdocument in idcards %}
+        <div class="column is-4" style="float:left">
+            <a href="{% url 'details' eachdocument.id %} ">
+                <div class="card is-shady">
+                    <div class="card-image">
+                        <figure class="image is-4by3">
+                            <!-- <img src="https://source.unsplash.com/6Ticnhs1AG0" alt="Placeholder image"> -->
+                            <img src="{% static eachdocument.image %}"> alt="Placeholder image" class="modal-button" data-target="modal-image2">
+                        </figure>
+            </a>
+            </div>
+            <div class="card-content">
+                <div class="content">
+                    <h4>{{eachdocument.first_name}} {{eachdocument.second_name}}</h4>
+                    <p>{{eachdocument.birthdate}} Issued {{eachdocument.district}}
+                        <a href="{% url 'details' eachdocument.id %} "> <span class="button is-link modal-button" data-target="modal-card">Read more </span>
+                        </a>
+                </div>
+            </div>
+            </div>
+
+        </div>{% endfor %}
+    </body>

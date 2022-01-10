@@ -1,0 +1,71 @@
+{% load static %} {{ query }} {% csrf_token %}
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Details</title>
+    <link rel="stylesheet" href="{% static '/css/stylew.css' %}">
+</head>
+
+<body>
+    <div class="docContainer">
+        <div class="lAndfNavbar">
+            <div class="navbarLeft">
+                <!-- <h1>Lost&found</h1> -->
+                <a href=" {% url 'home' %} "> <img src="{% static 'images/Lost & found.png '%}"> </a>
+            </div>
+            <div class="navbarRight">
+                <nav>
+                    <a href="{% url 'home' %}">Home</a>
+                    <a href=" {% url 'ordering' %}">About</a>
+                    <a href="#">About</a>
+                    <a href="#">Contact us</a>
+                </nav>
+            </div>
+        </div>
+        <!DOCTYPE html>
+        <html lang="en">
+
+        <head>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Document</title>
+        </head>
+
+        <body>
+
+        </body>
+
+        </html>
+        <form action="" method="POST" name="q">
+            <table class="table">
+
+                <thead>
+                    <tr>
+
+                        <th scope="col">First name</th>
+                        <th scope="col">Second name</th>
+                        <th scope="col">ID number </th>
+                        <th scope="col">Issued District </th>
+                        <th scope="col">Issued Sector </th>
+                        <th scope="col">Date of Birth </th>
+
+                    </tr>
+                </thead>
+
+                <tbody>
+                    {% for search in data %}
+                    <tr>
+                        <td>{{search.first_name}}</td>
+                        <td>{{search.second_name}}</td>
+                        <td>{{search.district}}</td>
+                        <td>{{search.sector}}</td>
+                    </tr>{% endfor %} {% csrf_token %}
+                </tbody>
+        </form>
+        </table>

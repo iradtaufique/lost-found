@@ -1,0 +1,9 @@
+{
+    "workbench.settings.useSplitJSON": true,
+    "javascript.referencesCodeLens.showOnAllFunctions": true,
+    "js/ts.implicitProjectConfig.checkJs": true,
+    "js/ts.implicitProjectConfig.strictNullChecks": true,
+    "terminal.integrated.commandsToSkipShell": [
+        "python"
+    ]
+}

@@ -1,0 +1,37 @@
+<h1> Hello </h1>
+<h1> Hello User Sign Up</h1>
+{% load crispy_forms_tags %}
+
+<form action="/sing_up" method="POST">
+    {% csrf_token %}
+    <!-- <label for=""> Username </label>
+    <input type="" id="username" name="username" placeholder="kindly create username" required>
+    <br>
+
+    <label for=""> Your First name </label>
+    <input type="" id="username" name="fname" placeholder="kindly create username" required>
+    <br>
+
+    <label for=""> Lastname </label>
+    <input type="" id="lastname" name="lname" placeholder="your name " required>
+    <br>
+
+    <label for=""> Email </label>
+    <input type="email" id="email" name="email" placeholder="Your email" required>
+    <br>
+
+    <label for=""> Phone number </label>
+    <input type="" id="phone" name="phone" placeholder="Phone number " required>
+    <br>
+
+    <label for=""> Password</label>
+    <input type="password" id="pass1" name="pass1" placeholder="Pass***" required>
+    <br>
+
+    <label for=""> Confirm Password </label>
+    <input type="password" id="pass2" name="pass2" placeholder="confirm Password" required>
+    <br>
+    <br>
+    <button type="Submit" value="Register">Register </button> -->
+    {{form|crispy}}
+</form>
